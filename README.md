@@ -26,3 +26,17 @@ Simple Demo
 
 	
 <img src="phone_picker_demo.gif" width="480" />
+
+
+Usage code example
+
+
+    private fun initView() {
+        val phoneAndFlagList = PhoneCodesPicker.getCountriesList(this).map { it.codeAndFlag }
+        val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, phoneAndFlagList)
+        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        phonePrefixSpinner.adapter = spinnerAdapter
+        phonePrefixSpinner.setOnItemLongClickListener { parent, view, position, id ->
+            return@setOnItemLongClickListener true
+        }
+    }
