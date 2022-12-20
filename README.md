@@ -19,7 +19,7 @@ Step #2
 Add the dependency
 
 	dependencies {
-	        implementation 'com.github.farkhodkh:PhoneCodesPicker:Tag'
+	        implementation 'com.github.farkhodkh:PhoneCodesPicker:0.0.1'
 	}
 
 Simple Demo
